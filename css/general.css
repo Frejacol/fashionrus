@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-img {
+header img {
   max-width: 20%;
   display: block;
   margin: 0 auto;
@@ -46,4 +46,26 @@ main a:hover {
 .grid_1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hero {
+  width: 100%;
+  margin: 2em 0;
+  grid-area: 1/1;
+}
+
+.logo {
+  grid-area: 1/1;
+  margin: auto;
+  display: block;
+  max-width: 40%;
+  background-color: rgba(255, 255, 255, 0.706);
+  padding: 2em;
+  border-radius: 20px;
+}
+
+.grid_1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
 }
