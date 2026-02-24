@@ -3,8 +3,9 @@
   padding: 0;
 }
 
-header {
-  border-bottom: 1.5px solid #d37fa1;
+nav {
+  padding: 1.5em 0;
+  background-color: #d37fa1;
 }
 
 header img {
@@ -13,10 +14,13 @@ header img {
   margin: 0 auto;
 }
 
+header img:hover {
+  transform: scale(110%);
+}
+
 ul {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 1em;
 }
 
 ul li {
@@ -25,11 +29,11 @@ ul li {
 
 ul li a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 nav li a:hover {
-  color: #d37fa1;
+  color: #ffdcea;
   text-decoration: underline;
 }
 
