@@ -8,7 +8,6 @@ fetch("https://kea-alt-del.dk/t7/api/products")
   });
 
 function showProducts(productsarr) {
-  productContainer.innerHTML = "";
   productsarr.forEach((product) => {
     productContainer.innerHTML += `<div class="card">
           <div class="grid_1">
@@ -21,7 +20,7 @@ function showProducts(productsarr) {
             <div>
               <p>prev. DKK ${product.price},-</p>
               <p>now DKK 105,-</p>
-              <a href="produktinfo.html">Read More</a>
+              <a href="produktinfo.html?id=${product.id}">Read More</a>
             </div>
             <p class="discount">${product.discount}%</p>
           </div>
