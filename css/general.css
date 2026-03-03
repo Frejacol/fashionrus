@@ -85,6 +85,7 @@ h2 {
 
 .apparel {
   margin: 1em 1.5em;
+  grid-column: 1 / -1;
 }
 
 footer p {
