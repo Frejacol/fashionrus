@@ -5,7 +5,7 @@ const category = params.get("category");
 
 const productContainer = document.querySelector("#productlist");
 
-fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`).then((response) =>
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=50`).then((response) =>
   response.json().then((data) => {
     showProducts(data);
   }),
