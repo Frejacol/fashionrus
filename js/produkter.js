@@ -25,12 +25,11 @@ function showProducts(productsarr) {
             <div>
               <p class="price">DKK ${product.price},-</p>
               <div class="discounted_element">
-                <p>now DKK ${Math.round(product.price * (1 - product.discount / 100))},-</p>
+                <p>Now DKK ${Math.round(product.price * (1 - product.discount / 100))},-</p>
                 <p class="discount">${product.discount}%</p>
               </div>
               <a href="produktinfo.html?id=${product.id}">Read More</a>
             </div>
-            
           </div>
         </div>`;
   });
