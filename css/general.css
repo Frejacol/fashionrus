@@ -265,3 +265,36 @@ button:hover {
   top: 0;
   left: 0;
 }
+
+.soldoutTxtProduct {
+  display: none;
+}
+
+.soldOut .soldoutTxtProduct {
+  display: block;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.discountedPrice {
+  text-decoration: line-through;
+}
+
+.discountNoShow {
+  display: none;
+}
+
+.productimg {
+  grid-area: 1 / 1;
+}
+
+.soldoutTxtProduct {
+  grid-area: 1 / 1;
+  text-align: center;
+  color: #fff;
+  background-color: #d37fa1;
+  padding: 1em 0;
+  margin: 0 auto;
+  width: 80%;
+}
