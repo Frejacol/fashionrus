@@ -110,6 +110,8 @@ div img {
   border-radius: 20px;
   margin: 1em 1em;
   padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: subgrid;
 }
 
 .card a {
@@ -247,6 +249,10 @@ button:hover {
 }
 
 & .discounted .price {
+  text-decoration: line-through;
+}
+
+& .soldOut .price {
   text-decoration: line-through;
 }
 
