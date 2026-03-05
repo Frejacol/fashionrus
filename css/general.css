@@ -110,6 +110,8 @@ div img {
   border-radius: 20px;
   margin: 1em 1em;
   padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: subgrid;
 }
 
 .card a {
@@ -138,7 +140,7 @@ div img {
   grid-area: 1 / 1;
 }
 
-.sold {
+.soldoutTxt {
   grid-area: 1 / 1;
   text-align: center;
   color: #fff;
@@ -231,4 +233,68 @@ button {
 button:hover {
   background-color: #643e4d;
   color: #fff;
+}
+
+.discounted_element p,
+& .discounted.soldOut .discounted_element p {
+  display: none;
+}
+
+& .discounted .discounted_element {
+  display: flex;
+  justify-content: space-between;
+  & p {
+    display: block;
+  }
+}
+
+& .discounted .price {
+  text-decoration: line-through;
+}
+
+& .soldOut .price {
+  text-decoration: line-through;
+}
+
+& .soldoutTxt {
+  display: none;
+}
+& .soldOut .soldoutTxt {
+  display: block;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.soldoutTxtProduct {
+  display: none;
+}
+
+.soldOut .soldoutTxtProduct {
+  display: block;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.discountedPrice {
+  text-decoration: line-through;
+}
+
+.discountNoShow {
+  display: none;
+}
+
+.productimg {
+  grid-area: 1 / 1;
+}
+
+.soldoutTxtProduct {
+  grid-area: 1 / 1;
+  text-align: center;
+  color: #fff;
+  background-color: #d37fa1;
+  padding: 1em 0;
+  margin: 0 auto;
+  width: 80%;
 }

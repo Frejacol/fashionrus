@@ -9,7 +9,10 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((response) => response.json())
   .then((data) => {
     productContainer.innerHTML = `
+      <div class="grid_1${data.soldout ? " soldOut" : ""}">    
         <img class="productimg" src="https://kea-alt-del.dk/t7/images/webp/640/${id}.webp" alt="" />
+        <p class="soldoutTxtProduct">SOLD OUT</p>
+      </div>
         <div class="info">
           <h2>Product Information</h2>
           <br />
@@ -28,7 +31,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
           <br />
           <p>${data.articletype} | ${data.brandname}</p>
           <br />
+          <div class="${data.discount ? " discountedPrice" : ""}">
           <p><strong>DKK ${data.price},-</strong></p>
+          </div>
+          <div class="${data.discount ? " discounted" : "discountNoShow"}">
+          <p><strong>DKK ${Math.round(data.price * (1 - data.discount / 100))},-</strong></p>
+          </div>
           <br />
           <label for="size-select">Choose a size</label>
           <select id="size-select" name="size">
