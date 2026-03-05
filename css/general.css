@@ -138,7 +138,7 @@ div img {
   grid-area: 1 / 1;
 }
 
-.sold {
+.soldoutTxt {
   grid-area: 1 / 1;
   text-align: center;
   color: #fff;
@@ -231,4 +231,31 @@ button {
 button:hover {
   background-color: #643e4d;
   color: #fff;
+}
+
+.discounted_element p,
+& .discounted.soldOut .discounted_element p {
+  display: none;
+}
+
+& .discounted .discounted_element {
+  display: flex;
+  justify-content: space-between;
+  & p {
+    display: block;
+  }
+}
+
+& .discounted .price {
+  text-decoration: line-through;
+}
+
+& .soldoutTxt {
+  display: none;
+}
+& .soldOut .soldoutTxt {
+  display: block;
+  z-index: 100;
+  top: 0;
+  left: 0;
 }
