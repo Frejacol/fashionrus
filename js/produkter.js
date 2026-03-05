@@ -14,15 +14,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=50`).th
 function showProducts(productsarr) {
   productContainer.innerHTML = `<h2 class="apparel">${category}</h2>`;
   productsarr.forEach((product) => {
-    if (product.soldout) {
-      console.log("product status: udsolgt");
-    } else {
-      console.log("product status: på lager");
-    }
-
-    product.soldout ? console.log("product status: udsolgt") : console.log("product status: på lager");
-
-    productContainer.innerHTML += `<div class="card ${product.soldout ? "soldOut" : ""}">
+    productContainer.innerHTML += `<div class="card${product.soldout ? " soldOut" : ""}${product.discount ? " discounted" : ""}">
           <div class="grid_1">
             <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="" />
             <p class="soldoutTxt">SOLD OUT</p>
